@@ -1,0 +1,23 @@
+{
+  "manualKey": "mcm",
+  "manualName": "Manual de Control de Mantenimiento",
+  "targetPagesMin": 80,
+  "targetPagesMax": 90,
+  "format": {
+    "paper": "LETTER",
+    "font": "Calibri",
+    "fontSize": 11,
+    "lineHeight": 1.15,
+    "margins": "normal"
+  },
+  "chapters": [
+    {
+      "id": "cap-01",
+      "title": "Titulo del capitulo",
+      "objective": "",
+      "targetWords": 0,
+      "instructions": []
+    }
+  ],
+  "globalInstructions": []
+}

@@ -1,0 +1,7 @@
+@"
+node_modules/
+.env
+back.err.log
+back.out.log
+tmp_sms_generated.txt
+"@ | Set-Content .gitignore

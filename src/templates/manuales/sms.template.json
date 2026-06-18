@@ -1,0 +1,345 @@
+{
+  "manualKey": "sms",
+  "manualName": "Manual del Sistema de Gestion de Seguridad Operacional (SMS) - Explotador UAS",
+  "baseTemplate": "sms_base_template.docx",
+  "targetPagesMin": 80,
+  "targetPagesMax": 90,
+  "format": {
+    "paper": "LETTER",
+    "font": "Calibri",
+    "fontSize": 11,
+    "lineHeight": 1.15,
+    "margins": "normal"
+  },
+  "documentControl": {
+    "documentCode": "SMS-MAN-001",
+    "version": "01",
+    "issueDate": "{{FECHA}}",
+    "companyName": "{{EMPRESA}}",
+    "nit": "{{NIT}}"
+  },
+  "globalInstructions": [
+    "Escribir en espanol tecnico aeronautico, orientado a certificacion de Explotador UAS.",
+    "Alinear el contenido con RAC 219 y operacion UAS bajo RAC 100, categoria especifica si aplica.",
+    "No inventar datos especificos de la empresa, nombres, matriculas, ubicaciones exactas, numeros internos ni reglamentos internos que no existan.",
+    "Si falta un dato identificatorio critico, usar exactamente: [POR DEFINIR]. Para datos operacionales no criticos, redactar en forma generica aplicable al explotador UAS y evitar repetir [POR DEFINIR] innecesariamente.",
+    "Usar tono institucional y de sistema de gestion: politica, objetivos, responsabilidades, reportes, aseguramiento, mejora continua, analisis y evidencia.",
+    "Cada capitulo debe iniciar con su numero y titulo principal, y luego desarrollarse con subtitulos numerados obligatorios, por ejemplo 2.1, 2.2, 2.3.",
+    "Usar numeracion 1, 1.1 y 1.1.1 cuando aplique. No usar cuarto nivel de numeracion como 2.1.2.1 o superior.",
+    "No entregar bloques de texto planos ni listas desordenadas como cuerpo principal del manual.",
+    "Incluir procedimientos con formato claro cuando aplique: proposito, alcance, responsables, entradas, actividades, salidas o registros, indicadores y referencias.",
+    "Usar tablas solo cuando aporten valor real. Preferir parrafos breves, subtitulos y frases separadas por punto y aparte.",
+    "En todo el manual estan prohibidos los literales a), b), c), d) y similares. Si se requiere enumerar elementos, usar viñetas con punto o parrafos separados.",
+    "Mantener coherencia en terminos: peligro vs riesgo, SPI, SPT, cultura justa, gestion del cambio, mitigacion, riesgo residual, reporte, analisis, mitigacion y verificacion.",
+    "No redactar contenido de control de mantenimiento, MCM, aeronavegabilidad continua ni procedimientos de mantenimiento, salvo cuando solo se mencione su interfaz con el SMS.",
+    "No agregar capitulos adicionales. Respetar estrictamente el orden de chapters[].",
+    "No escribir marcadores como CAP_01, ANX_01 ni notas al modelo dentro del contenido final.",
+    "Cada subapartado debe tener entre 1 y 3 parrafos cortos o una lista corta. Evitar relleno, repeticiones y desarrollos excesivos.",
+    "El documento completo debe quedar compacto y ejecutable, pensado para un rango aproximado de 80 a 90 paginas finales."
+  ],
+  "chapters": [
+    {
+      "id": "cap-00",
+      "placeholder": "{{CAP_00}}",
+      "title": "Control del Manual (Portada, LPE, Revisiones, Distribucion)",
+      "objective": "Establecer control documental formal del manual SMS, version, vigencia, paginas efectivas, revisiones y distribucion.",
+      "targetWords": 1200,
+      "minWords": 1020,
+      "maxWords": 1380,
+      "instructions": [
+        "Desarrollar obligatoriamente con estructura numerada 1, 1.1, 1.2, 1.3, 1.4 y 1.5.",
+        "Usar esta guia de subtitulos: 1.1 Portada, 1.2 Lista de Paginas Efectivas, 1.3 Registro de Revisiones, 1.4 Lista de Distribucion, 1.5 Control de Cambios y Copias.",
+        "Incluir portada con razon social [POR DEFINIR], NIT [POR DEFINIR], codigo del documento SMS-MAN-001, version, fecha y aprobado por Ejecutivo Responsable.",
+        "Incluir seccion Lista de Paginas Efectivas con tabla Capitulo, Pagina desde, Pagina hasta, Revision y Fecha. Indicar que la paginacion final se completa tras la consolidacion.",
+        "Incluir Registro de Revisiones con tabla Revision, Descripcion del cambio, Fecha y Aprobado por.",
+        "Incluir Lista de Distribucion, controlada y no controlada, y reglas de uso del documento.",
+        "Definir control de copias, control de cambios, responsables de actualizacion, responsables de aprobacion y periodicidad de revision.",
+        "Definir encabezado o pie sugerido: SMS-MAN-001 | Rev XX | Pagina X de Y."
+      ]
+    },
+    {
+      "id": "cap-01",
+      "placeholder": "{{CAP_01}}",
+      "title": "Introduccion, Alcance y Marco Normativo",
+      "objective": "Definir proposito del SMS, alcance operacional UAS, aplicabilidad y referencias normativas.",
+      "targetWords": 1000,
+      "minWords": 850,
+      "maxWords": 1150,
+      "instructions": [
+        "Desarrollar obligatoriamente con estructura 2, 2.1, 2.2, 2.3, 2.4 y 2.5.",
+        "Usar esta guia de subtitulos: 2.1 Introduccion al SMS, 2.2 Alcance y Aplicabilidad, 2.3 Marco Normativo y Documentos Relacionados, 2.4 Definiciones, 2.5 Acronimos y Terminologia.",
+        "Explicar que es el SMS y su proposito para un Explotador UAS.",
+        "Definir alcance: tipo de operacion UAS [POR DEFINIR], area geografica [POR DEFINIR], tipos de UAS [POR DEFINIR], modalidades VLOS o BVLOS si aplica [POR DEFINIR].",
+        "Incluir lista de documentos relacionados: Manual de Operaciones UAS, Manual de Mantenimiento si aplica, Manual de Entrenamiento, Procedimientos de emergencia y otros documentos asociados.",
+        "Incluir marco normativo con lenguaje prudente: RAC 219, RAC 100 y referencias OACI aplicables al SMS.",
+        "Las definiciones deben salir numeradas o en subtitulos internos, no como parrafo unico sin estructura."
+      ]
+    },
+    {
+      "id": "cap-02",
+      "placeholder": "{{CAP_02}}",
+      "title": "Politica y Objetivos de Seguridad Operacional",
+      "objective": "Establecer la politica de seguridad firmada por la alta direccion, objetivos, compromisos y cultura justa.",
+      "targetWords": 1000,
+      "minWords": 850,
+      "maxWords": 1150,
+      "instructions": [
+        "Desarrollar obligatoriamente con estructura 3, 3.1, 3.2, 3.3, 3.4 y 3.5.",
+        "Usar esta guia de subtitulos: 3.1 Politica de Seguridad Operacional, 3.2 Objetivos del SMS, 3.3 Compromisos de la Alta Direccion, 3.4 Autoridad y Rendicion de Cuentas, 3.5 Cultura Justa.",
+        "Incluir politica SMS redactada para firma del Ejecutivo Responsable, en texto formal listo para aprobar.",
+        "Incluir compromisos: cumplimiento normativo, mejora continua, asignacion de recursos, reporte sin represalias y gestion de riesgos.",
+        "Incluir entre 3 y 6 objetivos de seguridad operacional medibles y ejemplos de metas.",
+        "Definir responsabilidades de rendicion de cuentas y autoridad del Ejecutivo Responsable.",
+        "Incluir seccion de Cultura Justa con principios, comportamientos aceptables y no aceptables, sin inventar reglamentos internos."
+      ]
+    },
+    {
+      "id": "cap-03",
+      "placeholder": "{{CAP_03}}",
+      "title": "Organizacion del SMS, Roles y Responsabilidades",
+      "objective": "Definir estructura, roles SMS, comite de seguridad, responsabilidades y comunicaciones internas.",
+      "targetWords": 1100,
+      "minWords": 950,
+      "maxWords": 1250,
+      "instructions": [
+        "Desarrollar obligatoriamente con estructura 4, 4.1, 4.2, 4.3 y 4.4.",
+        "Usar esta guia de subtitulos: 4.1 Estructura Organizacional del SMS, 4.2 Roles y Responsabilidades, 4.3 Comite de Seguridad Operacional, 4.4 Matriz RACI y Comunicacion Interna.",
+        "Describir en texto el organigrama SMS con roles como Ejecutivo Responsable, Gerente SMS, Jefe de Pilotos, Pilotos UAS, Mantenimiento si aplica y Calidad u Operaciones si aplica.",
+        "Definir perfil, autoridad y funciones del Gerente SMS.",
+        "Definir comite de seguridad: composicion, frecuencia, quorum, actas, decisiones y seguimiento.",
+        "Incluir matriz RACI para procesos clave: reportes, analisis de riesgos, gestion del cambio, auditorias y formacion SMS."
+      ]
+    },
+    {
+      "id": "cap-04",
+      "placeholder": "{{CAP_04}}",
+      "title": "Gestion del Riesgo: Identificacion de Peligros",
+      "objective": "Definir el proceso y fuentes para identificar peligros de forma proactiva, reactiva y predictiva.",
+      "targetWords": 1100,
+      "minWords": 950,
+      "maxWords": 1250,
+      "instructions": [
+        "Desarrollar obligatoriamente con estructura 5, 5.1, 5.2, 5.3 y 5.4.",
+        "Usar esta guia de subtitulos: 5.1 Objetivo del Proceso de Identificacion, 5.2 Fuentes de Identificacion de Peligros, 5.3 Clasificacion de Peligros UAS, 5.4 Registro y Trazabilidad.",
+        "Definir el proceso paso a paso para identificar peligros.",
+        "Incluir fuentes minimas: reportes internos, inspecciones, auditorias, analisis de misiones, cambios operacionales, incidentes, informacion de fabricantes y lecciones aprendidas.",
+        "Clasificar peligros por categorias UAS: persona u operacion, tecnico, entorno, organizacion y terceros.",
+        "Incluir formato de Registro de Peligros con campos: ID, descripcion, fuente, fecha, area y proceso afectado."
+      ]
+    },
+    {
+      "id": "cap-05",
+      "placeholder": "{{CAP_05}}",
+      "title": "Gestion del Riesgo: Evaluacion, Mitigacion y Aceptacion",
+      "objective": "Establecer metodologia de evaluacion de riesgos, probabilidad, severidad, mitigacion, aceptacion y seguimiento.",
+      "targetWords": 1200,
+      "minWords": 1000,
+      "maxWords": 1400,
+      "instructions": [
+        "Desarrollar obligatoriamente con estructura 6, 6.1, 6.2, 6.3, 6.4 y 6.5.",
+        "Usar esta guia de subtitulos: 6.1 Metodologia de Evaluacion, 6.2 Severidad, 6.3 Probabilidad, 6.4 Mitigacion y Riesgo Residual, 6.5 Aceptacion y Seguimiento.",
+        "Incluir metodologia con definiciones de severidad y probabilidad, tablas de 1 a 5.",
+        "Incluir matriz de riesgo 5x5 y criterios de aceptacion descritos en texto.",
+        "Definir proceso de mitigacion: seleccion de barreras o controles, responsable, fecha y verificacion de eficacia.",
+        "Definir criterios de aceptacion del riesgo y quien autoriza.",
+        "Incluir ejemplo de registro de mitigaciones con riesgo inicial, controles, riesgo residual y evidencia."
+      ]
+    },
+    {
+      "id": "cap-06",
+      "placeholder": "{{CAP_06}}",
+      "title": "Gestion del Cambio (MOC)",
+      "objective": "Controlar cambios que puedan afectar la seguridad operacional y asegurar evaluacion previa y posterior.",
+      "targetWords": 900,
+      "minWords": 750,
+      "maxWords": 1050,
+      "instructions": [
+        "Desarrollar obligatoriamente con estructura 7, 7.1, 7.2, 7.3 y 7.4.",
+        "Usar esta guia de subtitulos: 7.1 Cambios Significativos para la Operacion UAS, 7.2 Flujo MOC, 7.3 Evaluacion y Aprobacion, 7.4 Cambios de Emergencia y Verificacion.",
+        "Definir que es un cambio significativo para UAS: nuevo tipo de dron, nuevo software, BVLOS, nuevas zonas, nuevos procedimientos, nuevos pilotos, nuevos proveedores criticos.",
+        "Definir proceso MOC: solicitud, evaluacion, aprobacion, implementacion y verificacion.",
+        "Incluir checklist de cambio con campos: descripcion, riesgos, mitigaciones, responsable, fecha y aprobacion.",
+        "Definir cambios de emergencia y controles temporales."
+      ]
+    },
+    {
+      "id": "cap-07",
+      "placeholder": "{{CAP_07}}",
+      "title": "Aseguramiento de la Seguridad: Monitoreo, Auditorias y Gestion de Hallazgos",
+      "objective": "Verificar que el SMS funciona mediante auditorias, inspecciones, seguimiento de hallazgos, acciones correctivas y eficacia.",
+      "targetWords": 1200,
+      "minWords": 1000,
+      "maxWords": 1400,
+      "instructions": [
+        "Desarrollar obligatoriamente con estructura 8, 8.1, 8.2, 8.3 y 8.4.",
+        "Usar esta guia de subtitulos: 8.1 Monitoreo y Verificacion del SMS, 8.2 Auditorias e Inspecciones, 8.3 Gestion de Hallazgos y Acciones, 8.4 Verificacion de Eficacia.",
+        "Definir programa de auditorias internas SMS: frecuencia, alcance, responsables y reporte.",
+        "Definir inspecciones operacionales como pre mision, post mision, revision de bitacoras y checklists.",
+        "Definir gestion de acciones correctivas o preventivas: registro, responsable, fecha, cierre y verificacion de eficacia.",
+        "Incluir formato de hallazgos con no conformidad, observacion y oportunidad de mejora."
+      ]
+    },
+    {
+      "id": "cap-08",
+      "placeholder": "{{CAP_08}}",
+      "title": "Desempeno de Seguridad: SPI, SPT y Reportabilidad",
+      "objective": "Definir indicadores y metas para controlar el desempeno y la toma de decisiones.",
+      "targetWords": 1000,
+      "minWords": 850,
+      "maxWords": 1150,
+      "instructions": [
+        "Desarrollar obligatoriamente con estructura 9, 9.1, 9.2, 9.3 y 9.4.",
+        "Usar esta guia de subtitulos: 9.1 Indicadores SPI, 9.2 Metas SPT y Umbrales, 9.3 Medicion y Reporte, 9.4 Analisis y Toma de Decisiones.",
+        "Definir minimo 6 SPI orientados a operacion UAS, por ejemplo perdidas de enlace, eventos GNSS, abortos de mision, incumplimiento checklist, incidentes en tierra y hallazgos recurrentes.",
+        "Definir SPT, metas y umbrales o tolerancias.",
+        "Definir periodicidad de medicion y reporte.",
+        "Incluir tablero de control sugerido y responsable de analisis."
+      ]
+    },
+    {
+      "id": "cap-09",
+      "placeholder": "{{CAP_09}}",
+      "title": "Gestion de Reportes de Seguridad e Investigacion",
+      "objective": "Establecer el sistema de reporte, clasificacion, investigacion, analisis de causas y retroalimentacion.",
+      "targetWords": 1200,
+      "minWords": 1000,
+      "maxWords": 1400,
+      "instructions": [
+        "Desarrollar obligatoriamente con estructura 10, 10.1, 10.2, 10.3, 10.4 y 10.5.",
+        "Usar esta guia de subtitulos: 10.1 Sistema de Reporte, 10.2 Clasificacion y Priorizacion, 10.3 Investigacion y Analisis de Causas, 10.4 Acciones y Cierre, 10.5 Lecciones Aprendidas.",
+        "Definir reporte voluntario y obligatorio, confidencialidad y no represalias.",
+        "Definir flujo: recepcion, clasificacion, triage, investigacion, analisis de causa, mitigacion, cierre y lecciones aprendidas.",
+        "Incluir clasificacion de eventos en terminos generales sin inventar categorias legales.",
+        "Definir tiempos objetivo de respuesta y roles del Gerente SMS y Jefe de Pilotos.",
+        "Incluir formatos: reporte inicial, informe de investigacion y registro de acciones."
+      ]
+    },
+    {
+      "id": "cap-10",
+      "placeholder": "{{CAP_10}}",
+      "title": "Promocion de la Seguridad: Capacitacion, Comunicacion y Cultura",
+      "objective": "Asegurar competencias SMS, comunicacion efectiva y fortalecimiento de cultura de seguridad.",
+      "targetWords": 900,
+      "minWords": 750,
+      "maxWords": 1050,
+      "instructions": [
+        "Desarrollar obligatoriamente con estructura 11, 11.1, 11.2 y 11.3.",
+        "Usar esta guia de subtitulos: 11.1 Programa de Capacitacion SMS, 11.2 Comunicacion y Promocion de la Seguridad, 11.3 Evaluacion de Efectividad.",
+        "Definir programa de capacitacion SMS de induccion y recurrente por rol.",
+        "Definir campanas y comunicaciones: boletines, briefings, charlas de seguridad y lecciones aprendidas.",
+        "Incluir evaluacion de efectividad con encuestas, evidencias e indicadores de formacion."
+      ]
+    },
+    {
+      "id": "cap-11",
+      "placeholder": "{{CAP_11}}",
+      "title": "Plan de Respuesta ante Emergencias (PRE) y Gestion de Crisis",
+      "objective": "Definir activacion del plan, roles, comunicaciones y coordinacion ante emergencias UAS.",
+      "targetWords": 1000,
+      "minWords": 850,
+      "maxWords": 1150,
+      "instructions": [
+        "Desarrollar obligatoriamente con estructura 12, 12.1, 12.2, 12.3 y 12.4.",
+        "Usar esta guia de subtitulos: 12.1 Escenarios de Emergencia, 12.2 Activacion y Cadena de Notificacion, 12.3 Coordinacion y Voceria, 12.4 Simulacros y Mejora.",
+        "Definir escenarios UAS: perdida de control, impacto a tercero, incendio de bateria, operacion no autorizada y evento en zona poblada.",
+        "Definir cadena de notificacion y roles.",
+        "Definir coordinacion con autoridades y comunicacion externa o voceria.",
+        "Definir ejercicios o simulacros y registro de lecciones aprendidas."
+      ]
+    },
+    {
+      "id": "cap-12",
+      "placeholder": "{{CAP_12}}",
+      "title": "Gestion de Proveedores y Actividades Contratadas",
+      "objective": "Asegurar que proveedores criticos no degraden el desempeno de seguridad.",
+      "targetWords": 750,
+      "minWords": 600,
+      "maxWords": 900,
+      "instructions": [
+        "Desarrollar obligatoriamente con estructura 13, 13.1, 13.2 y 13.3.",
+        "Usar esta guia de subtitulos: 13.1 Proveedores Criticos, 13.2 Evaluacion y Seguimiento, 13.3 Requisitos Contractuales y Evidencias.",
+        "Definir quienes son proveedores criticos: mantenimiento externo, software, enlaces, operacion subcontratada e instructores.",
+        "Definir evaluacion inicial, seguimiento y reevaluacion.",
+        "Incluir requisitos minimos en contratos: cumplimiento, reporte de eventos y acceso a informacion relevante."
+      ]
+    },
+    {
+      "id": "cap-13",
+      "placeholder": "{{CAP_13}}",
+      "title": "Control Documental y Control de Registros",
+      "objective": "Definir control de documentos, retencion, trazabilidad y proteccion de informacion del SMS.",
+      "targetWords": 850,
+      "minWords": 700,
+      "maxWords": 1000,
+      "instructions": [
+        "Desarrollar obligatoriamente con estructura 14, 14.1, 14.2 y 14.3.",
+        "Usar esta guia de subtitulos: 14.1 Control de Documentos, 14.2 Control de Registros, 14.3 Retencion, Acceso y Trazabilidad.",
+        "Definir control de documentos: creacion, revision, aprobacion, vigencia y obsolescencia.",
+        "Definir control de registros: retencion, almacenamiento, acceso, respaldo y confidencialidad.",
+        "Listar registros minimos del SMS: reportes, investigaciones, matriz de riesgos, actas de comite, auditorias, capacitaciones y acciones correctivas."
+      ]
+    },
+    {
+      "id": "cap-14",
+      "placeholder": "{{CAP_14}}",
+      "title": "Revision por la Direccion y Mejora Continua",
+      "objective": "Asegurar revision periodica del SMS, decisiones directivas y mejora continua.",
+      "targetWords": 800,
+      "minWords": 650,
+      "maxWords": 950,
+      "instructions": [
+        "Desarrollar obligatoriamente con estructura 15, 15.1, 15.2 y 15.3.",
+        "Usar esta guia de subtitulos: 15.1 Entradas de la Revision por la Direccion, 15.2 Salidas y Decisiones, 15.3 Plan de Mejora Continua.",
+        "Definir revision por la direccion, minima anual o semestral, y sus entradas: SPI o SPT, auditorias, hallazgos, riesgos principales, desempeno de proveedores y cambios.",
+        "Definir salidas: decisiones, recursos, prioridades y plan de mejora.",
+        "Incluir formato de acta de revision y plan de accion."
+      ]
+    },
+    {
+      "id": "anx-01",
+      "placeholder": "{{ANX_01}}",
+      "title": "Anexo A: Matriz de Riesgo, Probabilidad, Severidad y Criterios de Aceptacion",
+      "objective": "Proveer tablas estandar para evaluacion de riesgos.",
+      "targetWords": 550,
+      "minWords": 400,
+      "maxWords": 700,
+      "instructions": [
+        "Presentar este anexo como Anexo A con numeracion interna A.1, A.2 y A.3.",
+        "Usar esta guia de subtitulos: A.1 Tabla de Severidad, A.2 Tabla de Probabilidad y Matriz de Riesgo, A.3 Ejemplo Aplicado.",
+        "Incluir tabla de severidad 1 a 5 y probabilidad 1 a 5 con descripciones aplicadas a UAS.",
+        "Incluir matriz 5x5 en formato tabla de texto y criterios de aceptacion por nivel.",
+        "Incluir ejemplo de un riesgo evaluado con mitigacion y riesgo residual."
+      ]
+    },
+    {
+      "id": "anx-02",
+      "placeholder": "{{ANX_02}}",
+      "title": "Anexo B: Formatos y Registros del SMS",
+      "objective": "Incluir formatos listos para uso y evidencia en auditoria o certificacion.",
+      "targetWords": 750,
+      "minWords": 550,
+      "maxWords": 900,
+      "instructions": [
+        "Presentar este anexo como Anexo B con numeracion interna B.1, B.2, B.3, B.4, B.5, B.6 y B.7.",
+        "Cada formato debe quedar presentado con titulo, objetivo, campos sugeridos, responsable de diligenciamiento, frecuencia de uso, medio de conservacion y criterio de cierre o aprobacion cuando aplique.",
+        "Cada formato debe incluir un bloque minimo de encabezado con codigo sugerido, version, fecha, responsable y area aplicable.",
+        "Desarrollar cada formato con suficiente detalle practico para que pueda ser adoptado por la empresa sin quedar vacio o generico.",
+        "La estructura obligatoria por formato es: titulo del formato, objetivo, encabezado sugerido, campos minimos, responsable, frecuencia, conservacion, guia breve de diligenciamiento y evidencias asociadas.",
+        "En la seccion Campos minimos, cada campo debe ir en una linea independiente usando viñeta tipo punto. No usar literales a), b), c).",
+        "No agrupar varios formatos en un mismo bloque de texto. Cada formato debe quedar claramente separado por su subtitulo B.x.",
+        "Las guias de diligenciamiento deben ir en parrafos cortos y separados, no en una sola chorrera de texto.",
+        "Esta prohibido usar frases como 'campos esenciales:' seguidas de una lista corrida separada por comas. Los campos deben quedar siempre uno por linea.",
+        "Cada formato debe usar este orden interno fijo: Objetivo, Encabezado sugerido, Campos minimos, Responsable, Frecuencia, Conservacion, Guia de diligenciamiento, Evidencias asociadas.",
+        "En Encabezado sugerido y Campos minimos usar viñetas con punto, una por linea.",
+        "Incluir formato de reporte de seguridad, voluntario u obligatorio.",
+        "Incluir formato de investigacion y analisis de causa.",
+        "Incluir formato de registro de peligros.",
+        "Incluir formato de registro de acciones correctivas o preventivas.",
+        "Incluir formato de solicitud y evaluacion de cambio, MOC.",
+        "Incluir formato de acta de comite de seguridad.",
+        "Incluir formato de plan de capacitacion SMS.",
+        "Para cada formato, agregar una breve guia de diligenciamiento y una lista corta de evidencias o anexos asociados."
+      ]
+    }
+  ]
+}

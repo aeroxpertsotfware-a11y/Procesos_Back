@@ -73,11 +73,10 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-userSchema.pre("validate", function normalizeUserFields(next) {
+userSchema.pre("validate", function normalizeUserFields() {
   this.nombre = String(this.nombre || "").trim();
   this.email = String(this.email || "").trim().toLowerCase();
   this.rol = normalizeRole(this.rol || "cliente");
-  next();
 });
 
 module.exports = mongoose.model("User", userSchema);

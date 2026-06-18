@@ -59,10 +59,17 @@ const hydrateSignedUrls = async (expediente) => {
       continue;
     }
 
-    const signedUrl = await getSignedUrl(documentData.key);
-    if (documentData.url !== signedUrl) {
-      documentData.url = signedUrl;
-      hasChanges = true;
+    try {
+      const signedUrl = await getSignedUrl(documentData.key);
+      if (documentData.url !== signedUrl) {
+        documentData.url = signedUrl;
+        hasChanges = true;
+      }
+    } catch (error) {
+      console.error(
+        `No fue posible firmar la URL del documento ${documentKey} para el expediente ${expediente._id}:`,
+        error.message
+      );
     }
   }
 

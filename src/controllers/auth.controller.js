@@ -102,6 +102,7 @@ const login = async (req, res) => {
       return res.status(401).json({ message: "Credenciales inválidas" });
     }
 
+    user.rol = normalizeRole(user.rol || "cliente");
     const session = buildSession(req);
     user.sessions = [...(user.sessions || []).filter((item) => item?.sessionId), session];
     await user.save();

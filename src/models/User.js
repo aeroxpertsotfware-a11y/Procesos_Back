@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 
+const normalizeRole = (value) => String(value || "").trim().toLowerCase();
+
 const userSchema = new mongoose.Schema(
   {
     nombre: {
@@ -24,6 +26,7 @@ const userSchema = new mongoose.Schema(
       lowercase: true,
       trim: true,
       default: "cliente",
+      set: normalizeRole,
     },
     activo: {
       type: Boolean,
@@ -69,5 +72,12 @@ const userSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
+userSchema.pre("validate", function normalizeUserFields(next) {
+  this.nombre = String(this.nombre || "").trim();
+  this.email = String(this.email || "").trim().toLowerCase();
+  this.rol = normalizeRole(this.rol || "cliente");
+  next();
+});
 
 module.exports = mongoose.model("User", userSchema);
